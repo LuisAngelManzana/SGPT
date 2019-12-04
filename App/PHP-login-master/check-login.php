@@ -21,7 +21,7 @@ session_start();
 			include 'conn.php';	
 			
 			// Connection variables
-			$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbtipo);
+			$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 			// Check connection
 			if (!$conn) {
@@ -29,13 +29,13 @@ session_start();
 			}
 			
 			// data sent from form login.html 
-			$email = $_POST['nc']; 
+			$nc = $_POST['nc']; 
 			$password = $_POST['password'];
 			$tipo = $_POST['tipo'];
 
 			
 			// Query sent to database
-			$result = mysqli_query($conn, "SELECT NC, Password, Name, Tipo FROM users WHERE NC = '$nc'");
+			$result = mysqli_query($conn, "SELECT NC, Password, Name, Tipo, Semestre, Carrera, Email FROM users WHERE NC = '$nc'");
 			
 			// Variable $row hold the result of the query
 			$row = mysqli_fetch_assoc($result);
@@ -52,15 +52,38 @@ session_start();
 				
 				$_SESSION['loggedin'] = true;
 				$_SESSION['name'] = $row['Name'];
+				$_SESSION['nc'] = $row['NC'];
+				$_SESSION['tipo'] = $row['Tipo'];
+				$_SESSION['semestre'] = $row['Semestre'];
+				$_SESSION['carrera'] = $row['Carrera'];
+				$_SESSION['email'] = $row['Email'];
 				$_SESSION['start'] = time();
-				$_SESSION['expire'] = $_SESSION['start'] + (1 * 60) ;						
+				$_SESSION['expire'] = $_SESSION['start'] + (5 * 60) ;
+
+				if ($row[Tipo] == 1) {
+					$row[Tipo] = "Estudiante";
+				}
+				if ($row[Tipo] == 2) {
+					$row[Tipo] = "Asesor";
+				}
+				if ($row[Tipo] == 3) {
+					$row[Tipo] = "Tutor";
+				}
+				if ($row[Tipo] == 4) {
+					$row[Tipo] = "Jefe de Divicion";
+				}
 				
-				echo "<div class='alert alert-success mt-4' role='alert'><strong>Welcome!</strong> $row[Name]			
-				<p><a href='edit-profile.php'>Edit Profile</a></p>	
-				<p><a href='logout.php'>Logout</a></p></div>";	
+				echo "<div class='alert alert-success mt-4' role='alert'><strong>Bienvenido!</strong> $row[Name]<br/>
+				<strong>Numero de Control:</strong> $row[NC]<br/>
+				<strong>Email:</strong> $row[Email]<br/>
+				$row[Tipo]<br/>
+				<strong>Semestre:</strong> $row[Semestre]<br/>
+				<strong>Carrera:</strong> $row[Carrera]<br/>
+				<p><a href='edit-profile.php'>Información Perfil</a></p>
+				<p><a href='logout.php'>Logout</a></p></div>";
 			
 			} else {
-				echo "<div class='alert alert-danger mt-4' role='alert'>Email or Password are incorrects!
+				echo "<div class='alert alert-danger mt-4' role='alert'>NC or Password are incorrects!
 				<p><a href='login.html'><strong>Please try again!</strong></a></p></div>";			
 			}	
 			?>

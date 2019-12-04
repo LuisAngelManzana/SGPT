@@ -37,8 +37,9 @@ session_start();
     ?>
 
     <div class="container">
-        <p>Welcome: <?php echo $_SESSION['name']; ?></p>
-        <h3>Edit your profile</h3>
+        <p>Bienvenido: <?php echo $_SESSION['name']; ?></p>
+        <h3>Este es tu perfil</h3>
+        <p>Bienvenido: <?php echo $_SESSION['nc']; ?></p>
         <ul>
             <li>Change picture</li>
             <li>Change Bio</li>
