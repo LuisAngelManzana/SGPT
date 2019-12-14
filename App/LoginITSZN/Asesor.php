@@ -15,7 +15,7 @@
 
   <!-- Buttons Start!! -->
   <div class="buttons">
-    <a class="btn blue" HREF="Dar_de_alta_restaurantes.php?tipo=<?php echo $tipo;?>&id=<?php echo $id;?>&Nombre=<?php echo $nombre;?>&Pass=<?php echo $pass;?>"> Validar Proyecto</a>
+    <a class="btn blue" HREF="profesor/revision/p1.php?tipo=<?php echo $tipo;?>&id=<?php echo $id;?>&Nombre=<?php echo $nombre;?>&Pass=<?php echo $pass;?>"> Validar Proyecto</a>
    
    
   <!--<a class="btn yellow">Yellow Button</a>-->

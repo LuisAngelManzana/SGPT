@@ -15,7 +15,7 @@
 
   <!-- Buttons Start!! -->
   <div class="buttons">
-    <a class="btn blue" HREF="Dar_de_alta_restaurantes.php?tipo=<?php echo $tipo;?>&id=<?php echo $id;?>&Nombre=<?php echo $nombre;?>&Pass=<?php echo $pass;?>"> Solicitar Titulacion</a>
+    <a class="btn blue" HREF="alumno/solicitud/p2.php?tipo=<?php echo $tipo;?>&id=<?php echo $id;?>&Nombre=<?php echo $nombre;?>&Pass=<?php echo $pass;?>"> Solicitar Titulacion</a>
    
    <a class="btn red" HREF="Actualizar_datosGerente.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Consultar Resultados</a>
     

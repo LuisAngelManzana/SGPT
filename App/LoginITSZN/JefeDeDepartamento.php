@@ -14,18 +14,18 @@
 
   <!-- Buttons Start!! -->
   <div class="buttons">
-    <a class="btn blue" HREF="Actualizar_datosCliente.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Registrar Proyecto</a>
+    <a class="btn blue" HREF="jefe/registro/registro.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Registrar Proyecto</a>
+    
     <a class="btn green" HREF="CONSULTACLIENTE.php">Validar Requisitos</a>
 
     <a class="btn red" HREF="Actualizar_datosGerente.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Asignar Asesores/Revisores</a>
 
-    <a class="btn blue" HREF="Actualizar_datosGerente.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Obtener Reportes</a>
+    <a class="btn blue" HREF="jefe/reporte/menu.php?Nombre=<?php echo $nombre;?>&pass=<?php echo $pass;?>"> Obtener Reportes</a>
     
    
   <!--<a class="btn yellow">Yellow Button</a>-->
   </div>
     
-  
 	</body>
 </html>
 

@@ -11,7 +11,7 @@
 		
 		$servidor="localhost";
 		$usuario="root";
-		$clave="";
+		$clave="root";
 		$bd="crud";
 
 		$conexion=mysqli_connect($servidor,$usuario,$clave,$bd);
@@ -24,7 +24,6 @@
 		$renglon=mysqli_fetch_array($resultado);
 		$renglon2=mysqli_fetch_array($resultado2);
 
-		echo $renglon['tipo'];
 		mysqli_close($conexion);
 	
 		if($renglon['tipo'] == 1)
