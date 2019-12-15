@@ -77,7 +77,7 @@
 	$doc = addslashes(fread(fopen('doc.pdf',"r"), filesize('doc.pdf')));
 	$servidor = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $bd ="crud";
     $conexion = mysqli_connect($servidor, $usuario, $clave, $bd);
     $consulta = "INSERT INTO proyecto_asesor (id, nombre, docente_id, documento) VALUES (0,'". $NombreProyecto ."-".$FechaActual."', NULL, '". $doc."');";
