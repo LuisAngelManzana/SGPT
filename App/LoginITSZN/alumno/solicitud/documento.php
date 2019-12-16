@@ -13,7 +13,7 @@
 	$s_informe = addslashes(fread(fopen($informe,"r"), filesize($informe)));
 	$servidor = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $bd ="crud";
     $connect = mysqli_connect($servidor, $usuario, $clave, $bd);
     $c = "INSERT INTO proyecto_estudiante (idproyecto_estudiante, estudiante_id, nombre, documento) VALUES (0, ".$Id.", 'ANEXO_". $anexo ."-Pv.pdf', '". $s_anexo."');";

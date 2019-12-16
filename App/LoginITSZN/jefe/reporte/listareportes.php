@@ -9,7 +9,7 @@
     $pdf->Cell(192,10, 'Reportes estatus de proyectos', 0, 0, 'C');
 	$servidor = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $bd ="crud";
     $connect = mysqli_connect($servidor, $usuario, $clave, $bd);
     $c = "SELECT * FROM proyecto_asesor INNER join docente where proyecto_asesor.docente_id = docente.id";

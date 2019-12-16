@@ -11,7 +11,7 @@
 		
 		$servidor="localhost";
 		$usuario="root";
-		$clave="root";
+		$clave="";
 		$bd="crud";
 
 		$conexion=mysqli_connect($servidor,$usuario,$clave,$bd);

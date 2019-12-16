@@ -3,7 +3,7 @@
 	$doc = $_GET['Doc'];
 	$servidor = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $bd ="crud";
     $connect = mysqli_connect($servidor, $usuario, $clave, $bd);
  	$c = "SELECT * from proyecto_estudiante where nombre = '".$doc."';";

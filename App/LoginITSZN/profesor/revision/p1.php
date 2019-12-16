@@ -20,7 +20,7 @@
 
 							$servidor = 'localhost';
 							$usuario = 'root';
-							$clave = 'root';
+							$clave = '';
 							$bd ='crud';
 							$connect = mysqli_connect($servidor, $usuario, $clave, $bd);
 

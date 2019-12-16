@@ -13,7 +13,7 @@
 
 	$servidor = "localhost";
     $usuario = "root";
-    $clave = "root";
+    $clave = "";
     $bd ="crud";
     $conexion = mysqli_connect($servidor, $usuario, $clave, $bd);
     $consulta = "SELECT proyecto_estudiante.nombre FROM proyecto_estudiante WHERE SUBSTR(proyecto_estudiante.nombre,-13,10) between '".$Inicio."' and '".$Fin."';";
